@@ -3,19 +3,47 @@ const characters = ["A","B","C","D","E","F","G","H","I","J","K","L","M","N","O"
 
 let pswdOneEl = document.getElementById("password-1")
 let pswdTwoEl = document.getElementById("password-2")
+const customLengthEl = document.getElementById("custom-length")
+const omitCharsEl = document.getElementById("omit-chars")
+const button = document.getElementById("submit")
 
-function generatePassword() {
+function generatePassword(length, omittedChars) {
     let password = ""
-    for (let i = 0; i < 15; i += 1) {
-        let randIndex = Math.floor(Math.random() * characters.length)
-        password += characters[randIndex]
+    let chars = characters
+    if (omittedChars) {
+        for (let i = 0; i < omittedChars.length; i++) {
+            let index = chars.indexOf(omittedChars[i])
+            if (index !== -1) {
+                chars.splice(index, 1)
+            }
+        }
     }
+
+    for (let i = 0; i < length; i += 1) {
+        let randIndex = Math.floor(Math.random() * chars.length)
+        password += chars[randIndex]
+    }
+
     return password
 }
 
-function displayPasswords() {
-    let pswd1 = generatePassword()
-    let pswd2 = generatePassword()
+function displayPasswords(length, omiittedChars) {
+    let pswd1 = generatePassword(length, omiittedChars)
+    let pswd2 = generatePassword(length, omiittedChars)
+    console.log(pswd1)
+    console.log(pswd2)
+    console.log("Done")
     pswdOneEl.textContent = pswd1
     pswdTwoEl.textContent = pswd2
 }
+
+button.addEventListener("click", function() {
+    const length = customLengthEl.value;
+    const ommittedChars = omitCharsEl.value;
+    if (length) {
+        displayPasswords(length, ommittedChars)
+    }
+    else {
+        displayPasswords(15, ommittedChars)
+    }
+})

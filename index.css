@@ -32,6 +32,12 @@ span {
     padding: 50px 30px;
 }
 
+/* .action-container {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+} */
+
 button {
     background: #10B981;
     color: white;
@@ -54,4 +60,20 @@ button {
 
 .pswd-container {
     display: flex;
+}
+
+.input-container {
+    margin-bottom: 24px;
+}
+
+input {
+    height: 40px;
+    width: 140px;
+    padding: 5px 8px;
+    margin-top: 20px;
+    margin-right: 20px;
+}
+
+#omit-chars {
+    width: 260px;
 }

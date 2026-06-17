@@ -9,10 +9,16 @@
         <div class="container">
             <p class="title">Generate a <span>random password</span></p>
             <p class="caption">Never use an insecure password again.</p>
-            <button onclick="displayPasswords()">Generate passwords</button>
-            <div class="pswd-container">
-                <div id="password-1" class="pswd-display"></div>
-                <div id="password-2" class="pswd-display"></div>
+            <div>
+                <div class="input-container">
+                    <input id="custom-length" type="text" placeholder="Length (Default: 15)">
+                    <input id="omit-chars" type="text" placeholder="Omit characters (optional) i.e. !@#$%...">
+                </div>
+                <button id="submit">Generate passwords</button>
+                <div class="pswd-container">
+                    <div id="password-1" class="pswd-display"></div>
+                    <div id="password-2" class="pswd-display"></div>
+                </div>
             </div>
         </div>
         <script src="index.js"></script>
