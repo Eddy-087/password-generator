@@ -1,0 +1,57 @@
+body {
+    margin: 0;
+    background: #1C1C1C;
+    color: white;
+    font-family: Karla;
+}
+
+.title {
+    font-size: 40px;
+    font-weight: bold;
+    margin-bottom: 0px;
+}
+
+.caption {
+    color: lightgray;
+    margin-bottom: 50px;
+}
+
+.karla {
+  font-family: "Karla", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+}
+
+span {
+    color: #4ADF86;
+}
+
+.container {
+    margin: 30px;
+    background: #1F2937;
+    padding: 50px 30px;
+}
+
+button {
+    background: #10B981;
+    color: white;
+    padding: 9px 15px;
+    border-radius: 6px;
+    border: none;
+    margin-bottom: 70px;
+}
+
+.pswd-display {
+    background: #273549;
+    width: 180px;
+    height: 16px;
+    color: #55F991;
+    border-radius: 6px;
+    border: none;
+    margin: 0px 10px;
+    padding: 10px;
+}
+
+.pswd-container {
+    display: flex;
+}
